@@ -1,0 +1,67 @@
+<div class="row">
+  
+  <div class="col-md-4">
+    <label for="id_username" class="form-label">姓名(英文-登入用)</label>
+    <input type="text" name="username" class="form-control" id="id_username" required>
+    <div class="invalid-feedback">
+      需要。150個字符以內。僅允許字母、數字和 @/./+/-/_
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <label for="id_userFullName" class="form-label">姓名(中文全名)</label>
+    <input type="text" name="userFullName" class="form-control" id="id_userFullName" required>
+    <div class="invalid-feedback">
+      必填欄位
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="id_email" class="form-label">信箱</label>
+    <input type="email" name="email" class="form-control" maxlength="254" id="id_email" required>
+    <div class="invalid-feedback">
+      必填欄位
+    </div>
+  </div>
+  
+</div> 
+
+<div class="row">
+  
+  <div class="col-md-3">
+    <label for="id_userWorkArea" class="form-label">工作轄區</label>
+    <input type="text" name="userWorkArea" maxlength="50" class="form-control" id="id_userWorkArea" required>
+    <div class="invalid-feedback">
+      必填欄位
+    </div>
+  </div>
+  
+  <div class="col-md-3">
+    <label for="id_userRole" class="form-label">權限</label>
+    <input type="number" name="userRole" class="form-control" value="0" min="0" required id="id_userRole">
+    <div class="invalid-feedback">
+      必填欄位
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <label for="id_password1" class="form-label">登入密碼</label>
+    <input type="password" name="password1" autocomplete="new-password" class="form-control" required id="id_password1">
+    <div class="invalid-feedback">
+      您的密碼不能與其他個人信息太相似.<br>
+      您的密碼必須至少包含8個字元.<br>
+      您的密碼不能是常用密碼.<br>
+      您的密碼不能全是數字.
+    </div>
+  </div>
+  
+  <div class="col-md-3">
+    <label for="id_password2" class="form-label">密碼確認</label>
+    <input type="password" name="password2" autocomplete="new-password" class="form-control" required id="id_password2">
+    <div class="invalid-feedback">
+      輸入與登入密碼相同的密碼進行驗證。
+    </div>
+  </div>
+  
+</div>  
+
