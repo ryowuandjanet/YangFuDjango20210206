@@ -5,4 +5,5 @@ db.sqlite3
 Include
 Lib
 Scripts
-tcl
+tclsendgrid.env
+sendgrid.env

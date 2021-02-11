@@ -5,3 +5,8 @@ body {
 h1 {
   color:red;
 } 
+
+.container-fluid{
+  padding-top:50px;
+} 
+

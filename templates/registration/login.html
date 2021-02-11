@@ -125,6 +125,11 @@
       <input type="password" name="password" id="id_password" placeholder="請輸入密碼" autocomplete="new-password" autofill="off" />
       <input type="submit" name="" value="登入">
     </form>
+    <div>
+      <span class="text-lead lead">還沒有帳戶?</span><a href="{% url 'signup' %}"> 註冊</a><br>
+      <span class="text-lead lead">忘記密碼?</span><a href="{% url 'password_reset' %}"> 重新取得密碼</a>
+    </div>
+
     
   </div>
  

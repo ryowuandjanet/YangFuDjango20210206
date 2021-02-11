@@ -42,6 +42,12 @@
     <button class="btn btn-secondary" type="submit">註冊</button>
   </form>
   
+  <div>
+    <span class="text-lead lead">己有帳戶?</span><a href="{% url 'login' %}"> 回到登入頁面</a><br>
+    <span class="text-lead lead">忘記密碼?</span><a href="{% url 'password_reset' %}"> 重新取得密碼</a>
+  </div>
+
+  
   <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {

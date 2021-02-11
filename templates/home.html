@@ -1,5 +1,145 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
+
 {% block title %}Home{% endblock %}
+
 {% block content %}
-  <h1>我是主頁</h1>
+  <!-- ======CSS部份======= -->
+  <style>
+    .custom-radio {
+      display:inline;
+      padding:5px 10px;
+      border-radius:20px;
+      font-weight: bold;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      float: right;
+    }
+    .nowBeforeAll {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  </style>
+
+  <!-- ======HTML部份======= -->
+  <div class="row" style="display:flex;">
+    <div class="col-lg-2">
+      <!-- 標題/新增-區塊 -->
+      <strong class="fs-2">案件清單</strong>
+    </div>
+    <!-- 篩選-區塊 -->
+    <div class="col-lg-3 pt-1">
+      <!-- 案號篩選欄位 -->
+      <input class="form-control m-0" type="text" placeholder="案號">
+    </div>
+    <div class="col-lg-1 pt-1">
+      <!-- 縣市篩選欄位 -->
+          <select class="form-select m-0">
+            <option selected>縣市</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>  
+    </div>
+    <div class="col-lg-1 pt-1">
+      <!-- 人員篩選欄位 -->
+          <select class="form-select m-0" >
+            <option selected>人員</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+    </div>
+    <div class="col-lg-2 pt-1">
+        <!-- 最終判定篩選欄位 -->
+            <select class="form-select m-0">
+              <option selected>最終判定</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+      </div>
+  
+    <div class="col-lg-3 nowBeforeAll">
+      <!-- 所有/在案/過往-區塊 -->
+      <div class="mr-auto">
+        <div class="custom-control custom-radio custom-control-inline bg-primary text-light">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadioInline1">所有</label>
+        </div>
+        
+        <div class="custom-control custom-radio custom-control-inline bg-warning">
+          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadioInline2">在案</label>
+        </div>
+        
+        <div class="custom-control custom-radio custom-control-inline bg-success text-light">
+          <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadioInline3">過往</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card border border-secondary">
+    <div class="card-body">    
+      <div class="row">
+        <div class="col-lg-2">
+          <strong class="fs-6">編號：</strong>
+          <span class="text-primary">999</span>
+        </div>
+        <div class="col-lg-4">
+          <strong class="fs-6">案號：</strong>
+          <span class="text-primary">天字地號99876號</span>
+        </div>
+        <div class="col-lg-6">
+          <strong class="fs-6">地址：</strong>
+          <span class="text-primary">台南市東區生產路187-78號</span>
+        </div>
+      </div>
+      
+       <div class="row">
+        <div class="col-lg-2">
+          <strong class="fs-6">負責人：</strong>
+          <span class="text-primary">吳小毛</span>
+        </div>
+        <div class="col-lg-4">
+          <strong class="fs-6">最終判定：</strong>
+          <span class="text-primary">一拍進場</span>
+        </div>
+        <div class="col-lg-3">
+          <strong class="fs-6">執行結果：</strong>
+          <span class="text-primary">得標-等待優購</span>
+        </div>
+        <div class="col-lg-2">
+          <strong class="fs-6">
+             <a class="btn btn-danger text-white" style="padding:0px 5px;font-size:14pt;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);" href="#">契</a>
+          </strong>
+          <strong class="fs-6">
+            <a class="btn btn-secondary text-white" style="padding:0px 5px;font-size:14pt;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);" href="#">動</a>
+          </strong>
+          <strong class="fs-6">
+            <a class="btn btn-success text-white" style="padding:0px 5px;font-size:14pt;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);" href="#">狀</a>
+          </strong>
+          <strong class="fs-6">
+            <a class="btn btn-warning text-white" style="padding:0px 5px;font-size:14pt;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);" href="#">函</a>
+          </strong>
+          <strong class="fs-6">
+            <a class="btn btn-info text-white" style="padding:0px 5px;font-size:14pt;box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);" href="#">共</a>
+          </strong>
+        </div>
+        <div class="col-lg-1">
+          <strong class="fs-6 text-primary">KH001</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+  <!-- ======JS部份======= -->
+  <script>
+
+  </script>
 {% endblock %}
